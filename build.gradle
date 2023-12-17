@@ -135,7 +135,7 @@ if (System.getenv("GITHUB_TOKEN")) {
 		releaseName = verName
 		targetCommitish = System.getenv("GITHUB_REF_NAME")
 		draft = false
-		body = getChangelog(null)
+		body = getChangelog(project.source_url)
 		token System.getenv("GITHUB_TOKEN")
 		releaseAssets.from(remapJar)
 	}
